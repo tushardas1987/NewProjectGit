@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class ain
+    public class Singleton
     {
-       private ain() { }
-        private static ain _instance;
+       private singleton() { }
+        private static singleton _instance;
         private static object _lock=new object();
-            public static ain instance()
+            public static singleton instance()
             {
                 if (_instance == null)
                 {
                 lock (_lock)
                 {
-                    _instance = new ain();
+                    _instance = new singleton();
                 }
                 }
                 return _instance;
